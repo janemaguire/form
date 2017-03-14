@@ -3,15 +3,25 @@
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
     <script src="js/app.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
     <div>
       <label>Standard boxes</label>
-      <input type="text" ng-model="standardBox">
+      <button type="button" name="button" ng-click="standardBox = standardBox + 1" min="0" max="99" required>+</button>
+      <input type="number" ng-model="standardBox">
+      <button type="button" name="button" max="100" ng-click="standardBox = standardBox - 1" ng-init="standardBox=0">-</button>
+
       <label>Archive boxes</label>
-      <input type="text" ng-model="archiveBox">
+      <button type="button" name="button" ng-click="archiveBox = archiveBox + 1" ng-init="archiveBox=0">+</button>
+      <input type="number" ng-model="archiveBox">
+      <button type="button" name="button" ng-click="archiveBox = archiveBox - 1" ng-init="archiveBox=0">-</button>
+
       <label>Packing tape</label>
-      <input type="text" ng-model="packingTape">
+      <button type="button" name="button" ng-click="packingTape = packingTape + 1" ng-init="packingTape=0">+</button>
+      <input type="number" ng-model="packingTape">
+      <button type="button" name="button" ng-click="packingTape = packingTape - 1" ng-init="packingTape=0">-</button>
+
       <h1>Standard boxes: {{standardBox}}</h1>
       <h1>Archive boxes: {{archiveBox}}</h1>
       <h1>Packing tape: {{packingTape}}</h1>
