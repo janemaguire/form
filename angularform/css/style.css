@@ -29,6 +29,10 @@ input {
   color: grey;
 }
 
+input:focus {
+    outline-color: #70B7A2;
+}
+
 .product {
   display: block;
   padding: 20px;
