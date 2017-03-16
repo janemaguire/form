@@ -1,4 +1,1 @@
-angular.module('AngularForm', [$route])
-  .$scope.reloadRoute = function() {
-    $route.reload();
-  }
+angular.module('AngularForm', []);
